@@ -237,6 +237,12 @@ how to go about it.
 Changelog
 ---------
 
+- v3.0.2
+
+  - Remove the deprecated ``setuptools.command.test`` import and the ``tests_require`` option from ``setup.py``.
+  - Import ``Command`` from ``setuptools`` instead of ``distutils``, which was removed in Python 3.12.
+  - Add ``setuptools`` to ``test-requirements.txt`` because the tests import ``setup.py``.
+
 - v3.0.1
 
   - Reintroduce ``CalendarWalker.is_UTC()`` as a compatibility hook backed by ``icalendar.is_utc()``.
