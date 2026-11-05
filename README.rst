@@ -242,6 +242,8 @@ Changelog
   - Remove the deprecated ``setuptools.command.test`` import and the ``tests_require`` option from ``setup.py``.
   - Import ``Command`` from ``setuptools`` instead of ``distutils``, which was removed in Python 3.12.
   - Add ``setuptools`` to ``test-requirements.txt`` because the tests import ``setup.py``.
+  - Include ``test/conftest.py`` and the ``test/calendars`` fixtures in the source distribution,
+    so that the tests can run from the sdist, e.g. when building distribution packages.
 
 - v3.0.1
 
