@@ -2,8 +2,7 @@
 """The setup and build script for the library named "PACKAGE_NAME"."""
 import os
 import sys
-from setuptools.command.test import test as TestCommandBase
-from distutils.core import Command
+from setuptools import Command
 import subprocess
 
 PACKAGE_NAME = "x_wr_timezone"
@@ -113,12 +112,10 @@ class TagAndDeployCommand(Command):
 # Extra package metadata to be used only if setuptools is installed
 
 required_packages = read_requirements_file("requirements.txt")
-required_test_packages = read_requirements_file("test-requirements.txt")
 
 
 SETUPTOOLS_METADATA = dict(
     install_requires=required_packages,
-    tests_require=required_test_packages,
     project_urls={
         "GitHub Sponsors": "https://github.com/sponsors/niccokunzmann",
         "Open Collective": "https://opencollective.com/open-web-calendar/",
